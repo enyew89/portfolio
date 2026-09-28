@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0d0f12"/>
+  <rect x="0" y="0" width="800" height="36" fill="#12151a"/>
+  <circle cx="24" cy="18" r="5" fill="#2a2f38"/>
+  <circle cx="44" cy="18" r="5" fill="#2a2f38"/>
+  <circle cx="64" cy="18" r="5" fill="#2a2f38"/>
+  <rect x="300" y="12" width="200" height="13" rx="6" fill="#1a1e24"/>
+  <!-- sidebar -->
+  <rect x="0" y="36" width="170" height="464" fill="#0f1216"/>
+  <rect x="24" y="64" width="122" height="14" rx="4" fill="#ffffff" opacity="0.9"/>
+  <rect x="24" y="104" width="100" height="10" rx="4" fill="#2a2f38"/>
+  <rect x="24" y="132" width="112" height="10" rx="4" fill="#2a2f38"/>
+  <rect x="24" y="160" width="94" height="10" rx="4" fill="#2a2f38"/>
+  <rect x="24" y="188" width="106" height="10" rx="4" fill="#2a2f38"/>
+  <rect x="24" y="216" width="82" height="10" rx="4" fill="#2a2f38"/>
+  <!-- header -->
+  <rect x="194" y="64" width="180" height="16" rx="5" fill="#e5e7eb" opacity="0.85"/>
+  <rect x="560" y="58" width="120" height="28" rx="8" fill="#ffffff" opacity="0.95"/>
+  <!-- stat cards -->
+  <rect x="194" y="104" width="176" height="84" rx="10" fill="#12151a" stroke="#232830" stroke-width="1"/>
+  <rect x="210" y="122" width="70" height="9" rx="4" fill="#3a414d"/>
+  <rect x="210" y="146" width="96" height="20" rx="5" fill="#f4f5f7" opacity="0.9"/>
+  <rect x="394" y="104" width="176" height="84" rx="10" fill="#12151a" stroke="#232830" stroke-width="1"/>
+  <rect x="410" y="122" width="64" height="9" rx="4" fill="#3a414d"/>
+  <rect x="410" y="146" width="80" height="20" rx="5" fill="#f4f5f7" opacity="0.9"/>
+  <rect x="594" y="104" width="176" height="84" rx="10" fill="#12151a" stroke="#232830" stroke-width="1"/>
+  <rect x="610" y="122" width="58" height="9" rx="4" fill="#3a414d"/>
+  <rect x="610" y="146" width="72" height="20" rx="5" fill="#f4f5f7" opacity="0.9"/>
+  <!-- chart card -->
+  <rect x="194" y="212" width="370" height="200" rx="10" fill="#12151a" stroke="#232830" stroke-width="1"/>
+  <rect x="214" y="232" width="90" height="10" rx="4" fill="#3a414d"/>
+  <polyline points="214,380 254,352 294,366 334,330 374,344 414,308 454,322 494,296 534,270"
+            fill="none" stroke="#e5e7eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#2a2f38">
+    <circle cx="254" cy="352" r="3.5"/><circle cx="334" cy="330" r="3.5"/>
+    <circle cx="414" cy="308" r="3.5"/><circle cx="494" cy="296" r="3.5"/>
+  </g>
+  <circle cx="534" cy="270" r="4.5" fill="#ffffff"/>
+  <!-- maintenance list card -->
+  <rect x="594" y="212" width="176" height="200" rx="10" fill="#12151a" stroke="#232830" stroke-width="1"/>
+  <rect x="610" y="232" width="96" height="10" rx="4" fill="#3a414d"/>
+  <g>
+    <circle cx="618" cy="268" r="4" fill="#e5e7eb" opacity="0.9"/>
+    <rect x="632" y="263" width="104" height="9" rx="4" fill="#333a45"/>
+    <circle cx="618" cy="296" r="4" fill="#2a2f38"/>
+    <rect x="632" y="291" width="88" height="9" rx="4" fill="#2a2f38"/>
+    <circle cx="618" cy="324" r="4" fill="#2a2f38"/>
+    <rect x="632" y="319" width="112" height="9" rx="4" fill="#2a2f38"/>
+    <circle cx="618" cy="352" r="4" fill="#2a2f38"/>
+    <rect x="632" y="347" width="76" height="9" rx="4" fill="#2a2f38"/>
+    <rect x="610" y="376" width="88" height="22" rx="6" fill="#1e222a"/>
+    <rect x="622" y="383" width="64" height="8" rx="4" fill="#4a5260"/>
+  </g>
+</svg>
