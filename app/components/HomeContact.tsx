@@ -14,7 +14,7 @@ export default function HomeContact() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/contact"
-              className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:opacity-90 transition-opacity"
+              className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-background hover:opacity-90 transition-opacity"
             >
               Get in touch
             </Link>

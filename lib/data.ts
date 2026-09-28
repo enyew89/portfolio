@@ -2,7 +2,7 @@ export const site = {
   name: "Enyew Yirga",
   shortName: "Enyew",
   role: "Software Developer",
-  email: "enyew.yirga@example.com", // TODO: replace with your real email
+  email: "enyewyirga89@gmail.com",
   github: "https://github.com/enyew89",
   linkedin: "", // add your LinkedIn URL here when ready
   location: "Ethiopia",
@@ -43,8 +43,9 @@ export const projects: Project[] = [
     approach:
       "I modeled properties, units, and tenants as the core structure, then built payment tracking and a maintenance ticket flow around it.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
-    image: "/projects/rentora.svg",
+    image: "/projects/rentora-ui-v2.svg",
     github: "https://github.com/enyew89/Rentora",
+    demo: "https://rentora-bot1.onrender.com/",
     featured: true,
     year: "2026",
   },
@@ -58,7 +59,7 @@ export const projects: Project[] = [
     approach:
       "Built it with Next.js and Tailwind, animated the sections with Framer Motion, and deployed it on Vercel.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    image: "/projects/amar.svg",
+    image: "/projects/amar-ui-v2.svg",
     github: "https://github.com/enyew89/amar-water-proofing",
     demo: "https://amar-water-proofing.vercel.app",
     year: "2026",
@@ -73,8 +74,9 @@ export const projects: Project[] = [
     approach:
       "Split the project into separate frontend and backend apps, designed a questions API, and wired the game state through it.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
-    image: "/projects/thinkfast.svg",
+    image: "/projects/thinkfast-ui-v2.svg",
     github: "https://github.com/enyew89/Think-Fast",
+    demo: "https://think-fast-1.onrender.com",
     year: "2026",
   },
 ];
@@ -115,7 +117,7 @@ export const experience: ExperienceItem[] = [
     tags: ["Networking", "Windows", "Linux", "Troubleshooting"],
   },
   {
-    period: "2021 — 2025",
+    period: "2022 — 2026",
     title: "BSc Information Systems",
     place: "University",
     summary: "Where software met organizations.",

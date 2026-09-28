@@ -21,9 +21,11 @@ const links = [
     : []),
 ];
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
   const copyEmail = async () => {
@@ -36,7 +38,7 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -53,12 +55,26 @@ export default function Contact() {
     }
 
     setError("");
-    setSent(true);
-    // Opens a prefilled mail client. Swap for Formspree/Resend later if needed.
-    const subject = encodeURIComponent(`Portfolio contact from ${String(data.get("name") || "someone")}`);
-    const body = encodeURIComponent(`${message}\n\n— ${String(data.get("name") || "")} (${email})`);
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    form.reset();
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: String(data.get("name") || "").trim(),
+          email,
+          message,
+        }),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Failed to send.");
+      setStatus("sent");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Failed to send.");
+    }
   };
 
   return (
@@ -79,10 +95,10 @@ export default function Contact() {
               className="w-full flex items-center justify-between rounded-xl border border-accent/40 bg-surface px-5 py-4 text-left hover:bg-edge/30 transition-colors"
             >
               <span>
-                <span className="block text-xs font-mono uppercase tracking-widest text-muted">Email</span>
+                <span className="block text-xs uppercase tracking-widest text-muted">Email</span>
                 <span className="block mt-1 font-medium">{site.email}</span>
               </span>
-              <span className="font-mono text-xs text-accent">{copied ? "copied" : "copy"}</span>
+              <span className="text-xs text-accent">{copied ? "copied" : "copy"}</span>
             </button>
 
             {links.map((l) => (
@@ -107,12 +123,12 @@ export default function Contact() {
 
         {/* Right: form */}
         <Reveal delay={200}>
-          {sent ? (
+          {status === "sent" ? (
             <div className="h-full rounded-xl border border-edge bg-surface p-8 flex flex-col items-center justify-center text-center">
               <span className="text-accent text-2xl">✓</span>
-              <p className="mt-3 font-medium">Thanks — your mail app should be open.</p>
+              <p className="mt-3 font-medium">Message sent. I&apos;ll get back to you soon.</p>
               <button
-                onClick={() => setSent(false)}
+                onClick={() => setStatus("idle")}
                 className="mt-4 text-sm text-muted hover:text-accent transition-colors"
               >
                 Send another
@@ -163,9 +179,10 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:opacity-90 transition-opacity"
+                disabled={status === "sending"}
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-background hover:opacity-90 transition-opacity disabled:opacity-50"
               >
-                Send message
+                {status === "sending" ? "Sending…" : "Send message"}
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" />
                 </svg>

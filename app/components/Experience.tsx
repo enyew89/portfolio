@@ -16,7 +16,7 @@ export default function Experience() {
               <span
                 className={`absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 ${
                   exp.current
-                    ? "bg-accent border-accent shadow-[0_0_12px_rgba(255,255,255,0.4)]"
+                    ? "bg-accent border-accent shadow-[0_0_12px_rgba(23,24,28,0.35)] dark:shadow-[0_0_12px_rgba(255,255,255,0.35)]"
                     : "bg-background border-muted"
                 }`}
               />

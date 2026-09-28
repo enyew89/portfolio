@@ -33,7 +33,7 @@ export default function Hero() {
         <div className="mt-9 flex flex-wrap gap-3">
           <Link
             href="/projects"
-            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:opacity-90 transition-opacity"
+            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-background hover:opacity-90 transition-opacity"
           >
             View Projects
           </Link>

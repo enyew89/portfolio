@@ -11,10 +11,6 @@ export default function About() {
             I&apos;m an Information Systems graduate from Ethiopia. I enjoy
             turning ideas into working software, both frontend and backend.
           </p>
-          <p>
-            Right now I&apos;m building Rentora, a rental management platform,
-            and looking for new opportunities.
-          </p>
         </div>
       </Reveal>
 

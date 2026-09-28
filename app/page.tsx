@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import FeaturedProject from "./components/FeaturedProject";
 import Experience from "./components/Experience";
 import HomeContact from "./components/HomeContact";
 import Footer from "./components/Footer";
@@ -15,8 +14,6 @@ export default function Home() {
           <Hero />
           <hr className="section-divider" />
           <About />
-          <hr className="section-divider" />
-          <FeaturedProject />
           <hr className="section-divider" />
           <Experience />
           <hr className="section-divider" />

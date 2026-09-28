@@ -114,9 +114,9 @@ function SkillNode({
           {/* The Text Overlay */}
           <div className={`absolute inset-0 flex items-center justify-center pointer-events-none transition-all duration-300 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
             <span
-              className="font-extrabold text-white text-sm sm:text-base text-center px-1 leading-tight z-10 whitespace-nowrap -rotate-45"
+              className="font-extrabold text-[#17181c] dark:text-[#f0f1f4] text-sm sm:text-base text-center px-1 leading-tight z-10 whitespace-nowrap -rotate-45"
               style={{
-                textShadow: '2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 0 4px 8px rgba(0,0,0,0.9)'
+                textShadow: '0 1px 0 rgba(255,255,255,0.85), 0 -1px 0 rgba(255,255,255,0.85), 1px 0 0 rgba(255,255,255,0.85), -1px 0 0 rgba(255,255,255,0.85)'
               }}
             >
               {skill.name}
@@ -177,7 +177,6 @@ export default function Skills() {
     <section className="flex flex-col items-center justify-center py-16 sm:py-24 overflow-hidden">
       <div className="text-center mb-6 z-10 flex flex-col items-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Tech stack</h2>
-        <p className="mt-4 text-sm text-muted">Hover a tool to see how I use it.</p>
       </div>
 
       {/* Orbit Container with Side Controls.
