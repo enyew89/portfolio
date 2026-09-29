@@ -4,7 +4,8 @@ export const site = {
   role: "Software Developer",
   email: "enyewyirga89@gmail.com",
   github: "https://github.com/enyew89",
-  linkedin: "", // add your LinkedIn URL here when ready
+  linkedin: "https://www.linkedin.com/in/enyew-yirga-2258063ba/",
+  telegram: "https://t.me/Ifufailtoplanuplantofail",
   location: "Ethiopia",
   availability: "Available for opportunities",
 };

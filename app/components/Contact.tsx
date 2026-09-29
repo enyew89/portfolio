@@ -19,6 +19,15 @@ const links = [
         },
       ]
     : []),
+  ...(site.telegram
+    ? [
+        {
+          label: "Telegram",
+          href: site.telegram,
+          desc: "Fastest way to reach me",
+        },
+      ]
+    : []),
 ];
 
 type Status = "idle" | "sending" | "sent" | "error";
